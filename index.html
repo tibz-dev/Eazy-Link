@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+  <title>Eazy Link Group</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#home" class="logo"><img src="assets/images/logo.png" alt="Eazy Links Logo"></a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">Eazy Link</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#service" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#feature" class="navbar-link" data-nav-link>Features</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#materials" class="navbar-link" data-nav-link>Pricing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-nav-link>Free Job Listings</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="#" class="btn btn-primary has-before has-after">Log In👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+    <section class="section hero" id="home" aria-label="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="h1 hero-title">
+            Connecting You to<span class="has-before">Opportunities With</span> Ease.
+          </h1>
+          <p class="hero-text">
+            We, the Eazylink Consulting team, are mentorship and career-development specialists dedicated to guiding students, graduates, and professionals toward meaningful opportunities. 
+            We connect talent to growth by providing expert coaching, application support, and access to verified job opportunities in a fast-changing world.
+          </p>
+
+          <div class="wrapper">
+            <a href="#service" class="btn btn-primary has-before has-after">Our Services</a>
+
+            <button class="hero-btn" aria-label="Eazy Link promo">
+              <ion-icon name="play-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Meet Our Mentors</span>
+            </button>
+          </div>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link" style="--color: hsl(241, 77%, 63%);">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <span class="span">Facebook</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link" style="--color: hsl(0, 100%, 50%);">
+                <ion-icon name="logo-youtube"></ion-icon>
+                <span class="span">YouTube</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link" style="--color: hsl(203, 76%, 51%);">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <figure class="hero-banner">
+          <img src="./assets/images/hero-banner.png" width="794" height="637" alt="Eazy Link Hero Banner" class="w-100">
+        </figure>
+
+      </div>
+    </section>
+
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+   <section class="section service" id="service" aria-label="service">
+  <div class="container">
+
+    <p class="section-subtitle has-before text-center">Our Services</p>
+
+    <h2 class="h2 section-title text-center">
+      END-TO-END CAREER SOLUTIONS <span class="has-before"> TO HELP YOU</span> GROW WITH EASE.  
+    </h2>
+
+    <ul class="grid-list">
+
+      <li>
+        <div class="service-card" style="--color: 210, 100%, 53%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="person-circle-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Career Mentorship</a></h3>
+            <!-- Hidden description -->
+          <div class="service-desc">
+            <ion-icon name="document-text-outline" size="medium"></ion-icon>
+            <p>
+              Receive personalised one-on-one mentorship to define your career goals, build confidence, and navigate your professional journey.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" style="--color: 267, 76%, 57%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="trending-up-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Professional Development</a></h3>
+          
+          <div class="service-desc">
+            <ion-icon name="document-text-outline" size="medium"></ion-icon>
+            <p>
+              Receive personalised one-on-one mentorship to define your career goals, build confidence, and navigate your professional journey.Enhance your CV, LinkedIn profile, interview skills, and workplace readiness with expert guidance to boost employability.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" style="--color: 343, 98%, 60%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="clipboard-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Job Board & Placement</a></h3>
+          <!-- Hidden description -->
+          <div class="service-desc">
+            <ion-icon name="document-text-outline" size="medium"></ion-icon>
+            <p>
+              Access verified job listings, graduate programs, and internships, and get matched with opportunities that align with your goals.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" style="--color: 17, 100%, 68%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="send-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Application Submissions</a></h3>
+          <!-- Hidden description -->
+          <div class="service-desc">
+            <ion-icon name="document-text-outline" size="medium"></ion-icon>
+            <p>
+              We submit job, university, bursary, and scholarship applications on your behalf—accurately, professionally, and on time.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" style="--color: 157, 89%, 44%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="school-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Academic & Career Advisory</a></h3>
+          <!-- Hidden description -->
+          <div class="service-desc">
+            <ion-icon name="document-text-outline" size="medium"></ion-icon>
+            <p>
+              Get expert guidance on course selection, study pathways, career transitions, and choosing the right institution for your future.            </p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" style="--color: 52, 98%, 50%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="podium-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Corporate Training</a></h3>
+          <!-- Hidden description -->
+          <div class="service-desc">
+            <ion-icon name="document-text-outline" size="medium"></ion-icon>
+            <p>
+              We deliver tailored workshops on leadership, teamwork, communication, and professional growth for organisations and teams. </p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card" style="--color: 174, 77%, 50%" onclick="toggleService(this)">
+          <div class="card-icon">
+            <ion-icon name="document-text-outline" size="large"></ion-icon>
+          </div>
+          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Homework & Assignments</a></h3>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="link-card" style="--color: 203, 97%, 75%" onclick="toggleService(this)">
+          <span class="span">Online Platforms</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+    </section>
+
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+  <section class="section feature" id="feature" aria-label="feature">
+    <div class="container">
+
+      <figure class="feature-banner">
+        <img src="./assets/images/feature-banner.png" width="582" height="585" loading="lazy" alt="A.S. Tutoring feature"
+          class="w-100">
+      </figure>
+
+      <div class="feature-content">
+
+        <p class="section-subtitle has-before">Why Choose Us</p>
+
+        <h2 class="h2 section-title">
+          What You Can Expect <span class="has-before">From Eazy LINK</span>
+        </h2>
+
+        <ul class="feature-list">
+
+          <li>
+            <div class="feature-card">
+
+              <div class="card-icon" style="--color: 174, 77%, 50%">
+                <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Mentorship & Coaching</h3>
+                <p class="card-text">
+                  We provide expert guidance to help students, graduates, and professionals make informed career decisions and grow their skills.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="feature-card">
+
+              <div class="card-icon" style="--color: 241, 77%, 63%;">
+                <ion-icon name="people-sharp" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Application Support</h3>
+                <p class="card-text">
+                  Our team assists with CV building, application submissions, and interview preparation to boost your chances of success.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="feature-card">
+
+              <div class="card-icon" style="--color: 343, 98%, 60%;">
+                <ion-icon name="compass-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div>
+                <h3 class="h3 card-title">Verified Opportunities</h3>
+                <p class="card-text">
+                  Access internships, graduate programs, and professional roles verified by our team.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+      <!-- 
+        - #PRICING
+      -->
+
+    <section class="section project" id="materials" aria-label="materials">
+  <div class="container">
+
+    <p class="section-subtitle has-before text-center">Affordable. Transparent. Results-driven.</p>
+
+    <h2 class="h2 section-title text-center">
+      Eazy Link Pricing <span class="has-before">Packages</span>
+    </h2>
+
+    <ul class="filter-list">
+      <li><button class="filter-btn" data-filter-btn>New Graduates</button></li>
+      <li><button class="filter-btn" data-filter-btn>Professionals</button></li>
+      <li><button class="filter-btn" data-filter-btn>Corporate</button></li>
+      <li><button class="filter-btn" data-filter-btn>Matriculants</button></li>
+    </ul>
+
+    <ul class="grid-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; list-style: none; padding: 0;">
+
+   
+       <!-- New Graduates -->
+      <li class="grid-item students">
+        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
+          <h3>New Graduates</h3>
+          <p><strong>From R799/annum</strong></p>
+          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
+            <li>CV Writing</li>
+            <li>LinkedIn Optimisation</li>
+            <li>Job Applications</li>
+            <li>Interview Coaching</li>
+          </ul>
+          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
+        </div>
+      </li>
+       <!-- Professional Growth -->
+      <li class="grid-item students">
+        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
+          <h3>Professional Growth</h3>
+          <p><strong>From R1,299/annum</strong></p>
+          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
+            <li>1-on-1 Mentorship</li>
+            <li>Career Transition</li>
+            <li>Personal Branding</li>
+            <li>Job Matching</li>
+          </ul>
+          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
+        </div>
+      </li>
+
+
+       <!--Corporate Training -->
+      <li class="grid-item students">
+        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
+          <h3>Corporate Training</h3>
+          <p><strong>Custom Pricing</strong></p>
+          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
+            <li>Leadership Training</li>
+            <li>Soft Skills Workshops</li>
+            <li>Team Development</li>
+            <li>Performance Coaching</li>
+          </ul>
+          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
+        </div>
+      </li>
+         <!-- Grade 12s Starter -->
+      <li class="grid-item students">
+        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
+          <h3>Matriculants</h3>
+          <p><strong>From R399 once-off</strong></p>
+          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
+            <li>Career Guidance</li>
+            <li>University & College Applications</li>
+            <li>Bursary Applications</li>
+            <li>Course Selection</li>
+          </ul>
+          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="section newsletter has-bg-image" aria-label="newsletter"
+        style="background-image: url('./assets/images/newsletter-bg.jpg')">
+        <div class="container">
+
+          <figure class="newsletter-banner">
+            <img src="./assets/images/newsletter-banner.png" width="355" height="356" loading="lazy"
+              alt="newsletter banner" class="w-100">
+          </figure>
+
+          <div class="newsletter-content">
+
+            <p class="section-subtitle has-before">Get every update</p>
+
+            <h2 class="h2 section-title">Subscribe newslater get latest updates and deals</h2>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email_address" placeholder="Enter your mail" required class="email-field">
+
+              <button type="submit" class="btn btn-secondary has-before has-after">
+                <span class="span">Subscribe</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Youtube Classes
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle text-center has-before">Verified Opportunities</p>
+
+          <h2 class="h2 section-title text-center">
+            Access <span class="has-before"> Opportunities</span>
+          </h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card large">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/blog-1.jpg" width="644" height="363" loading="lazy"
+                    alt="Godaddy user flow solution..." class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+                    <a href="#" class="tag">Free Job Listings</a>
+                    <a href="#" class="publish-date">
+                      <ion-icon name="link-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">Link</span>
+                    </a>
+                  </div>
+
+                  <h3>
+                    <a href="#" class="card-title">Eazy Link Job Board</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Our platform connects applicants with employers using a simple, streamlined process. Job seekers, can find and apply relevant jobs with one click.
+                    Employers can Post jobs, search for and contact candidates
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/blog-2.jpg" width="202" height="162" loading="lazy"
+                    alt="Godaddy user flow solution for every individual" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+                    <a href="#" class="tag">Bursaries</a>
+
+                    <a href="#" class="publish-date">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">Follow link</span>
+                    </a>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">A list of South African undergraduate & postgraduate Bursaries</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/blog-3.png" width="202" height="162" loading="lazy"
+                    alt="Business solution for every individual" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+                    <a href="#" class="tag">Development</a>
+
+                    <a href="#" class="publish-date">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">July 21, 2020</span>
+                    </a>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Business solution for every individual</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/blog-4.png" width="202" height="162" loading="lazy"
+                    alt="How to gain pro experience ar figma update version" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+                    <a href="#" class="tag">Development</a>
+
+                    <a href="#" class="publish-date">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">July 21, 2020</span>
+                    </a>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">How to gain pro experience ar figma update version</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Eazy Link</p>
+
+          <p class="footer-text">
+            The Eazy Link Group is a career-development specialists dedicated to guiding students, graduates, and professionals toward meaningful opportunities. 
+            We connect talent to growth by providing expert coaching, application support, and access to verified job opportunities in a fast-changing world.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Usefull Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">How it Works</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Create</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Explore</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Services</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Community</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help Center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Partners</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Suggestions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Job Listings</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Newsletters</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Youtube Lessons</p>
+          </li>
+
+          <li>
+            <ul class="insta-post">
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./assets/images/insta-post-1.jpg" width="77" height="63" loading="lazy"
+                      alt="Youtube Lessons" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-Youtube" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./assets/images/insta-post-2.jpg" width="77" height="63" loading="lazy"
+                      alt="Youtube Lessons" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-Youtube" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./assets/images/insta-post-3.jpg" width="77" height="63" loading="lazy"
+                      alt="Youtube Lessons" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-Youtube" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./assets/images/insta-post-4.jpg" width="77" height="63" loading="lazy"
+                      alt="Youtube Lessons" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-Youtube" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./assets/images/insta-post-5.jpg" width="77" height="63" loading="lazy"
+                      alt="Youtube Lessons" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-Youtube" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./assets/images/insta-post-6.jpg" width="77" height="63" loading="lazy"
+                      alt="Youtube Lessons" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-Youtube" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Eazy Link. All Rights Reserved by Dev Solutions Za
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Login / Signup</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+  function toggleService(card) {
+    card.classList.toggle("active");
+  }
+</script>
+
+
+</body>
+
+</html>

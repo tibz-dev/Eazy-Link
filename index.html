@@ -517,140 +517,126 @@
       <!-- 
         - #Youtube Classes
       -->
+<section class="section mentorship" id="mentorship" aria-label="Our Mentors">
+  <div class="container">
 
-      <section class="section blog" id="blog" aria-label="blog">
-        <div class="container">
+    <p class="section-subtitle text-center has-before">Meet Our Experts</p>
 
-          <p class="section-subtitle text-center has-before">Verified Opportunities</p>
+    <h2 class="h2 section-title text-center">
+      Find Your <span class="has-before">Mentor</span>
+    </h2>
 
-          <h2 class="h2 section-title text-center">
-            Access <span class="has-before"> Opportunities</span>
-          </h2>
+    <div class="mentor-selection text-center" style="margin-bottom:2rem;">
+      <p>Select the career you want to pursue:</p>
 
-          <ul class="blog-list">
+      <select id="careerInterest" style="padding:0.5rem; margin-right:0.5rem; border-radius:5px;">
+        <option value="">--Select a Career--</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Programming">Programming</option>
+        <option value="Entrepreneurship">Entrepreneurship</option>
+        <option value="Science">Science</option>
+      </select>
 
-            <li>
-              <div class="blog-card large">
+      <a href="javascript:void(0);" onclick="findMentor()" class="btn btn-primary has-before has-after">
+        Find Mentor👋
+      </a>
+    </div>
 
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-1.jpg" width="644" height="363" loading="lazy"
-                    alt="Godaddy user flow solution..." class="img-cover">
-                </figure>
+    <div id="mentorResults" class="mentor-results" 
+         style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem;">
+      <!-- Mentor cards will appear here -->
+    </div>
 
-                <div class="card-content">
+  </div>
+</section>
 
-                  <div class="wrapper">
-                    <a href="#" class="tag">Free Job Listings</a>
-                    <a href="#" class="publish-date">
-                      <ion-icon name="link-outline" aria-hidden="true"></ion-icon>
-                      <span class="span">Link</span>
-                    </a>
-                  </div>
+<script>
+  // Mentor database
+  const mentors = [
+    {
+      name: "John Smith",
+      field: "Engineering",
+      bio: "Helps students with mechanical & software engineering projects.",
+      photo: "team-1.jpg"
+    },
+    {
+      name: "Mary Jones",
+      field: "Programming",
+      bio: "Guides kids in Python, Java & web development.",
+      photo: "team-2.jpg"
+    },
+    {
+      name: "Sarah Lee",
+      field: "Entrepreneurship",
+      bio: "Mentors on business, startups, and turning ideas into income.",
+      photo: "team-3.jpg"
+    }
+  ];
 
-                  <h3>
-                    <a href="#" class="card-title">Eazy Link Job Board</a>
-                  </h3>
+  function findMentor() {
+    const interest = document.getElementById('careerInterest').value;
+    const resultsDiv = document.getElementById('mentorResults');
+    resultsDiv.innerHTML = ""; // clear previous results
 
-                  <p class="card-text">
-                    Our platform connects applicants with employers using a simple, streamlined process. Job seekers, can find and apply relevant jobs with one click.
-                    Employers can Post jobs, search for and contact candidates
-                  </p>
+    if (!interest) {
+      resultsDiv.innerHTML = "<p>Please select a career interest first.</p>";
+      return;
+    }
 
-                </div>
+    const matches = mentors.filter(mentor => mentor.field === interest);
 
-              </div>
-            </li>
+    if(matches.length > 0) {
+      matches.forEach(mentor => {
+        const card = document.createElement('div');
+        card.classList.add('mentor-card');
+        card.style.width = "220px";
+        card.style.border = "1px solid #ccc";
+        card.style.borderRadius = "10px";
+        card.style.padding = "1rem";
+        card.style.textAlign = "center";
+        card.style.backgroundColor = "#f9f9f9";
+        card.style.position = "relative";
 
-            <li>
-              <div class="blog-card">
+        // WhatsApp booking link
+        const whatsappNumber = "+27748475208"; // your WhatsApp number
+        const message = encodeURIComponent(`Hi, I would like to book ${mentor.name} as my mentor. Can I have availability?`);
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
 
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-2.jpg" width="202" height="162" loading="lazy"
-                    alt="Godaddy user flow solution for every individual" class="img-cover">
-                </figure>
+        card.innerHTML = `
+          <div>
+            <img src="./assets/images/${mentor.photo}" alt="${mentor.name}" 
+                 style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:1rem;">
+          </div>
 
-                <div class="card-content">
+          <h3>${mentor.name}</h3>
+          <p style="font-size:0.9rem; margin-bottom:0.5rem;">${mentor.bio}</p>
 
-                  <div class="wrapper">
-                    <a href="#" class="tag">Bursaries</a>
+          <a href="${whatsappLink}" target="_blank" 
+             class="btn btn-primary has-before has-after" 
+             style="
+               padding:6px 12px;          /* vertical + horizontal padding */
+               font-size:0.85rem;
+               border-radius:4px;         /* rectangle style */
+               text-decoration:none;
+               display:inline-block;
+               width:auto;                /* shrink to fit text */
+             ">
+            Book Me
+          </a>
+        `;
 
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                      <span class="span">Follow link</span>
-                    </a>
-                  </div>
+        resultsDiv.appendChild(card);
+      });
+    } else {
+      resultsDiv.innerHTML = `<p>Sorry, we currently don’t have a mentor for ${interest}. We’ll notify you when one becomes available!</p>`;
+    }
+  }
+</script>
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">A list of South African undergraduate & postgraduate Bursaries</a>
-                  </h3>
 
-                </div>
 
-              </div>
-            </li>
 
-            <li>
-              <div class="blog-card">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-3.png" width="202" height="162" loading="lazy"
-                    alt="Business solution for every individual" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="wrapper">
-                    <a href="#" class="tag">Development</a>
-
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">July 21, 2020</span>
-                    </a>
-                  </div>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Business solution for every individual</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-4.png" width="202" height="162" loading="lazy"
-                    alt="How to gain pro experience ar figma update version" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="wrapper">
-                    <a href="#" class="tag">Development</a>
-
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">July 21, 2020</span>
-                    </a>
-                  </div>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">How to gain pro experience ar figma update version</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
 
     </article>
   </main>

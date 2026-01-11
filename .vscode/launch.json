@@ -7,8 +7,9 @@
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "c:\\Users\\sesha\\Desktop\\My Websites\\Eazy Link\\index.html"
+            "name": "Launch Edge against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }

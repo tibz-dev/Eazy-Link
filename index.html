@@ -481,7 +481,7 @@
         - #NEWSLETTER
       -->
 
-      <section class="section newsletter has-bg-image" aria-label="newsletter"
+      <section id="newsletters" class="section newsletter has-bg-image" aria-label="newsletter"
         style="background-image: url('./assets/images/newsletter-bg.jpg')">
         <div class="container">
 
@@ -634,10 +634,95 @@
         }
       </script>
 
+
+      <!--
+      Opportunities Hub
+      -->
+      <section class="section opportunities" id="opportunities" aria-label="Opportunities Hub">
+        <div class="container">
+
+          <p class="section-subtitle has-before text-center">Global Access</p>
+
+          <h2 class="h2 section-title text-center">
+            Opportunities <span class="has-before">Hub</span>
+          </h2>
+
+          <p style="text-align:center; max-width:700px; margin:0 auto;">
+            We connect students and professionals to verified global job platforms, scholarships, bursaries,
+            internships and remote work opportunities outside South Africa.
+          </p>
+
+          <div class="opportunity-grid" id="opportunityGrid">
+            <!-- Opportunities loaded here -->
+          </div>
+
+        </div>
+      </section>
+
+      <script>
+const opportunities = [
+  {
+    title: "LinkedIn Jobs (Global)",
+    description: "Search international and remote jobs from verified global companies.",
+    type: "Job Platform",
+    link: "https://www.linkedin.com/jobs"
+  },
+  {
+    title: "Indeed Worldwide",
+    description: "Find jobs in the USA, UK, Europe and remote positions.",
+    type: "Job Platform",
+    link: "https://www.indeed.com"
+  },
+  {
+    title: "Scholarships.com",
+    description: "Global scholarships for undergraduate and postgraduate students.",
+    type: "Scholarship",
+    link: "https://www.scholarships.com"
+  },
+  {
+    title: "Chevening Scholarships",
+    description: "UK government funded scholarships for international students.",
+    type: "Scholarship",
+    link: "https://www.chevening.org"
+  },
+  {
+    title: "Erasmus+",
+    description: "Study, training and exchange programmes across Europe.",
+    type: "Scholarship",
+    link: "https://erasmus-plus.ec.europa.eu"
+  },
+  {
+    title: "Remote OK",
+    description: "Remote jobs in tech, marketing, design and customer support.",
+    type: "Remote Jobs",
+    link: "https://remoteok.com"
+  }
+];
+
+const grid = document.getElementById("opportunityGrid");
+
+opportunities.forEach(op => {
+  const card = document.createElement("div");
+  card.classList.add("opportunity-card");
+
+  card.innerHTML = `
+    <span class="opportunity-tag">${op.type}</span>
+    <h3>${op.title}</h3>
+    <p>${op.description}</p>
+    <a href="${op.link}" target="_blank" class="btn btn-primary has-before has-after">
+      Visit
+    </a>
+  `;
+
+  grid.appendChild(card);
+});
+</script>
+
+
+
       <!--
       - #Contact
       -->
-      
       <section class="section contact" id="contact" aria-label="contact">
         <div class="container">
 
@@ -717,12 +802,6 @@
           </div>
         </div>
       </section>
-
-
-
-
-
-
     </article>
   </main>
 
@@ -785,23 +864,14 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Contact us</a>
+            <a href="#contact" class="footer-link">Contact us</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">How it Works</a>
+            <a href="/documents/eazylink_consentform.pdf" class="footer-link">Consent Form</a>
           </li>
-
           <li>
-            <a href="#" class="footer-link">Create</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Explore</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Terms & Services</a>
+            <a href="./documents/easylink_policies.pdf" class="footer-link">Policies</a>
           </li>
 
         </ul>
@@ -813,7 +883,7 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Help Center</a>
+            <a href="#contact" class="footer-link">Help Center</a>
           </li>
 
           <li>
@@ -825,11 +895,11 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Job Listings</a>
+            <a href="http://www.eazylinkjobs.co.za/" class="footer-link">Job Listings</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Newsletters</a>
+            <a href="#newsletters" class="footer-link">Newsletters</a>
           </li>
 
         </ul>

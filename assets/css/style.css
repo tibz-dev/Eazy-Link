@@ -1560,6 +1560,43 @@ body {
   outline: none;
 }
 
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.opportunity-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.opportunity-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.opportunity-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.opportunity-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: #e9f0ff;
+  color: #0d6efd;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-bottom: 0.6rem;
+}
+
   
 
 }

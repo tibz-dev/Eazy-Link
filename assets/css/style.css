@@ -1544,6 +1544,27 @@ body {
   flex: 1;
 }
 
+@media (max-width: 768px) {
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+
+}
+
 .contact-form input,
 .contact-form textarea,
 .contact-form select {

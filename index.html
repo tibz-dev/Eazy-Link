@@ -743,63 +743,61 @@ opportunities.forEach(op => {
 
             <!-- Form -->
             <div class="contact-form">
+  <form id="eazylinkForm">
 
-              <form id="eazylinkForm">
+    <div class="input-group">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+    </div>
 
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
+    <input type="tel" id="phone" placeholder="Phone Number" required>
 
-                <div class="input-group">
-                  <input type="text" name="Full Name" placeholder="Full Name" required>
-                  <input type="email" name="Email" placeholder="Email Address" required>
-                </div>
+    <!-- Service -->
+    <select id="serviceSelect" required>
+      <option value="">Select Service</option>
+      <option>Career Mentorship</option>
+      <option>Professional Development</option>
+      <option>Job Board & Placement</option>
+      <option>Application Submissions</option>
+      <option>Academic & Career Advisory</option>
+      <option>Corporate Training</option>
+      <option>Homework & Assignments</option>
+      <option>Online Platforms</option>
+      <option>General Enquiry</option>
+    </select>
 
-                <input type="tel" name="Phone" placeholder="Phone Number" required>
+    <!-- Package -->
+    <select id="packageSelect" required>
+      <option value="">Select Pricing Package</option>
+      <option>Matriculant – R399 Once-off</option>
+      <option>New Graduate – R799 / annum</option>
+      <option>Professional Growth – R1,299 / annum</option>
+      <option>Corporate – Custom Pricing</option>
+    </select>
 
-                <!-- Service -->
-                <select name="Service" id="serviceSelect" required onchange="toggleUploads()">
-                  <option value="">Select Service</option>
-                  <option>Career Mentorship</option>
-                  <option>Professional Development</option>
-                  <option>Job Board & Placement</option>
-                  <option>Application Submissions</option>
-                  <option>Academic & Career Advisory</option>
-                  <option>Corporate Training</option>
-                  <option>Homework & Assignments</option>
-                  <option>Online Platforms</option>
-                  <option>General Enquiry</option>
-                </select>
+    <textarea id="message" rows="4" placeholder="Tell us what you need..."></textarea>
 
-                <!-- Package -->
-                <select name="Pricing Package" required>
-                  <option value="">Select Pricing Package</option>
-                  <option>Matriculant – R399 Once-off</option>
-                  <option>New Graduate – R799 / annum</option>
-                  <option>Professional Growth – R1,299 / annum</option>
-                  <option>Corporate – Custom Pricing</option>
-                </select>
+    <!-- Uploads -->
+    <div id="uploadSection" style="display:none;">
+      <label>Upload CV</label>
+      <input type="file" id="cvFile" accept=".pdf,.doc,.docx">
 
-                <textarea name="Message" rows="4" placeholder="Tell us what you need..."></textarea>
+      <label>Upload Qualifications</label>
+      <input type="file" id="qualFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
 
-                <!-- Uploads -->
-                <div id="uploadSection" style="display:none;">
-                  <label>Upload CV</label>
-                  <input type="file" name="CV">
+      <label>Other Documents</label>
+      <input type="file" id="otherFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+    </div>
 
-                  <label>Upload Qualifications</label>
-                  <input type="file" name="Qualifications">
+    <button type="submit" class="btn btn-primary has-before has-after" id="submitBtn">
+      Submit Request
+    </button>
 
-                  <label>Other Documents</label>
-                  <input type="file" name="Supporting Files">
-                </div>
+    <p id="statusText" style="margin-top:12px;"></p>
 
-                <button type="submit" class="btn btn-primary has-before has-after">
-                  Submit Request
-                </button>
-
-              </form>
-
+  </form>
             </div>
+
           </div>
         </div>
       </section>
@@ -1097,7 +1095,7 @@ ${k}: ${links[k]}`;
     submitBtn.textContent = "Submit Request";
   }
 });
-</script>
+  </script>
 
 
 

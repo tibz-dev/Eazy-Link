@@ -16,6 +16,7 @@
     <nav aria-label="Main navigation">
       <a href="#service">Services</a>
       <a href="#materials">Packages</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="portal" href="https://www.eazylinkjobs.co.za/">Jobs portal <span aria-hidden="true">↗</span></a>
@@ -60,11 +61,24 @@
         <p class="eyebrow">02 / Packages</p>
         <h2 id="package-title">Compare career packages.</h2>
       </div>
+      <div class="package-finder" id="packageFinder" hidden>
+        <div>
+          <label for="careerGoal">What would you like help with?</label>
+          <select id="careerGoal">
+            <option value="">Choose a goal</option>
+            <option value="matriculants">Choosing what to study after school</option>
+            <option value="graduates">Applying for my first job</option>
+            <option value="professionals">Growing or changing my career</option>
+            <option value="teams">Developing my team</option>
+          </select>
+        </div>
+        <a id="packageMatch" hidden>View matching package <span aria-hidden="true">↘</span></a>
+      </div>
       <div class="packages">
-        <article id="matriculants"><h3>Matriculants</h3><p class="price">From R399 <small>once-off</small></p><p>Career guidance, course selection, university and college applications, and bursary support.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
-        <article id="graduates"><h3>New graduates</h3><p class="price">From R799 <small>per year</small></p><p>CV writing, LinkedIn optimisation, job application support, and interview coaching.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
-        <article id="professionals"><h3>Professional growth</h3><p class="price">From R1,299 <small>per year</small></p><p>One-on-one mentorship, career transitions, personal branding, and job matching.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
-        <article id="teams"><h3>Corporate training</h3><p class="price">Custom pricing</p><p>Leadership and soft skills workshops, team development, and performance coaching.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="matriculants"><h3>Matriculants</h3><p class="price">From R399 <small>once-off</small></p><p>Career guidance, course selection, university and college applications, and bursary support.</p><a href="#contact" data-package="matriculants">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="graduates"><h3>New graduates</h3><p class="price">From R799 <small>per year</small></p><p>CV writing, LinkedIn optimisation, job application support, and interview coaching.</p><a href="#contact" data-package="graduates">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="professionals"><h3>Professional growth</h3><p class="price">From R1,299 <small>per year</small></p><p>One-on-one mentorship, career transitions, personal branding, and job matching.</p><a href="#contact" data-package="professionals">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="teams"><h3>Corporate training</h3><p class="price">Custom pricing</p><p>Leadership and soft skills workshops, team development, and performance coaching.</p><a href="#contact" data-package="teams">Enquire <span aria-hidden="true">↗</span></a></article>
       </div>
     </section>
 
@@ -83,9 +97,22 @@
       </div>
     </section>
 
+    <section class="wrap section-grid faq" id="faq" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow">04 / Common questions</p>
+        <h2 id="faq-title">Before you enquire.</h2>
+      </div>
+      <div class="service-list">
+        <details><summary>Can you help me apply for university or college?</summary><p>The matriculant package includes course selection, university and college application support, and help with bursary applications.</p></details>
+        <details><summary>Can I get help with my CV and interviews?</summary><p>The new graduate package includes CV writing, LinkedIn optimisation, and interview coaching.</p></details>
+        <details><summary>Where can I browse vacancies?</summary><p>Visit the <a href="https://www.eazylinkjobs.co.za/">jobs portal</a> to browse listings. You can also explore the <a href="#opportunities">jobs and study resources</a> on this page.</p></details>
+        <details><summary>What happens when I submit an enquiry?</summary><p>The form prepares your message and opens it in WhatsApp. Review the message there and tap Send when you’re ready.</p></details>
+      </div>
+    </section>
+
     <section class="wrap section-grid" id="contact" aria-labelledby="contact-title">
       <div>
-        <p class="eyebrow">04 / Contact</p>
+        <p class="eyebrow">05 / Contact</p>
         <h2 id="contact-title">Tell us what you need.</h2>
         <p>Complete the form to prepare your enquiry and open it in WhatsApp.</p>
         <address> Pretoria, South Africa<br>
@@ -120,10 +147,10 @@
         <label for="packageSelect">Package</label>
         <select id="packageSelect" required>
           <option value="">Select Pricing Package</option>
-          <option>Matriculant – R399 Once-off</option>
-          <option>New Graduate – R799 / annum</option>
-          <option>Professional Growth – R1,299 / annum</option>
-          <option>Corporate – Custom Pricing</option>
+          <option data-package="matriculants">Matriculant – R399 Once-off</option>
+          <option data-package="graduates">New Graduate – R799 / annum</option>
+          <option data-package="professionals">Professional Growth – R1,299 / annum</option>
+          <option data-package="teams">Corporate – Custom Pricing</option>
         </select>
 
         <label for="message">Message</label>

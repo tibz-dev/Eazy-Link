@@ -93,3 +93,31 @@ ${k}: ${links[k]}`;
     submitBtn.textContent = "Submit Request";
   }
 });
+
+
+const careerGoal = document.getElementById("careerGoal");
+const packageMatch = document.getElementById("packageMatch");
+const packageSelect = document.getElementById("packageSelect");
+
+function updatePackageMatch() {
+  const match = document.getElementById(careerGoal.value);
+  packageMatch.hidden = !match;
+
+  if (match) {
+    packageMatch.href = "#" + match.id;
+    packageMatch.firstChild.textContent = "View " + match.querySelector("h3").textContent + " ";
+  } else {
+    packageMatch.removeAttribute("href");
+  }
+}
+
+careerGoal.addEventListener("change", updatePackageMatch);
+updatePackageMatch();
+document.getElementById("packageFinder").hidden = false;
+
+document.querySelectorAll(".packages a[data-package]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const option = packageSelect.querySelector(`option[data-package="${link.dataset.package}"]`);
+    if (option) packageSelect.value = option.value;
+  });
+});

@@ -160,3 +160,28 @@ form textarea { resize: vertical; }
   .hero h1 { font-size: clamp(2.75rem, 13vw, 3.5rem); }
   .packages, .service-list { grid-template-columns: 1fr; }
 }
+
+.package-finder:not([hidden]) {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+  background: var(--panel);
+}
+.package-finder > div { flex: 1 1 16rem; min-width: 0; }
+.package-finder label { display: block; margin-bottom: .4rem; font-weight: 700; }
+.package-finder select {
+  width: 100%;
+  padding: .55rem;
+  border: 1px solid #677496;
+  border-radius: .3rem;
+  background: var(--canvas);
+  color: var(--ink);
+  color-scheme: dark;
+  font: inherit;
+}
+.package-finder a { color: var(--accent); font-weight: 700; }
+.faq { border-bottom: 1px solid var(--line); }

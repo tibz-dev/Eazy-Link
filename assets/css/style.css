@@ -75,6 +75,7 @@ h2 { font-size: clamp(2.9rem, 5.7vw, 5.2rem); }
   padding: clamp(1.25rem, 4vw, 3rem);
   background: var(--lime);
 }
+.route-art { display: block; width: 100%; height: auto; margin-block-end: 1.25rem; }
 .index-panel a {
   display: grid;
   grid-template-columns: 2rem 1fr auto;

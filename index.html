@@ -285,5 +285,35 @@
       </nav>
     </div>
   </footer>
+  <aside class="support-widget" aria-label="Quick support">
+    <button class="support-launch" id="chatLaunch" type="button" aria-controls="chatPopup" aria-expanded="false" hidden>Chatbot</button>
+    <a class="support-launch whatsapp-launch" id="whatsappLaunch" href="https://wa.me/27748475208">WhatsApp</a>
+  </aside>
+
+  <dialog class="support-popup" id="chatPopup" aria-labelledby="chatTitle">
+    <div class="support-heading">
+      <h2 id="chatTitle">EazyLink assistant</h2>
+      <form method="dialog"><button type="submit" aria-label="Close chatbot">×</button></form>
+    </div>
+    <p>Choose a topic for a quick answer.</p>
+    <div class="support-topics">
+      <button type="button" data-topic="packages">Packages</button>
+      <button type="button" data-topic="cv">CV and interviews</button>
+      <button type="button" data-topic="jobs">Finding jobs</button>
+      <button type="button" data-topic="study">Study applications</button>
+    </div>
+    <p id="chatAnswer" role="status"></p>
+    <a id="chatNext" hidden></a>
+    <a href="#ask-me" id="chatHuman">Ask the EazyLink team</a>
+  </dialog>
+
+  <dialog class="support-popup" id="whatsappPopup" aria-labelledby="whatsappTitle">
+    <div class="support-heading">
+      <h2 id="whatsappTitle">Chat on WhatsApp</h2>
+      <form method="dialog"><button type="submit" aria-label="Close WhatsApp popup">×</button></form>
+    </div>
+    <p>Start a conversation with EazyLink Careers. You can edit the greeting in WhatsApp before you send it.</p>
+    <a class="button" href="https://wa.me/27748475208?text=Hi%20EazyLink%20Careers%2C%20I%27d%20like%20some%20help.">Continue to WhatsApp ↗</a>
+  </dialog>
 </body>
 </html>

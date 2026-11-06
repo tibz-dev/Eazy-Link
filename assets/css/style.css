@@ -224,3 +224,42 @@ form[hidden] { display: none; }
 .directory-grid span { display: block; color: var(--muted); font-weight: 400; }
 .directory-note h3 { margin-bottom: .4rem; }
 #askForm { max-width: 42rem; }
+
+body { padding-bottom: 5rem; }
+.support-widget {
+  position: fixed;
+  z-index: 3;
+  right: 1rem;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: flex;
+  gap: .5rem;
+}
+.support-launch, .support-topics button, .support-heading button {
+  padding: .55rem .85rem;
+  border: 1px solid #677496;
+  border-radius: 2rem;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.whatsapp-launch { background: #a5efbb; color: #10271a; }
+.support-popup {
+  width: min(26rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 1.25rem;
+  border: 1px solid #677496;
+  border-radius: .8rem;
+  background: var(--panel);
+  color: var(--ink);
+}
+.support-popup::backdrop { background: #080b17b8; }
+.support-popup > * + * { margin-top: .8rem; }
+.support-popup p:empty { display: none; }
+.support-heading { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.support-heading h2 { font-size: 1.4rem; letter-spacing: -.02em; }
+.support-heading form { display: block; padding: 0; border: 0; }
+.support-topics { display: flex; flex-wrap: wrap; gap: .45rem; }
+.support-popup > a:not([hidden], .button) { display: block; color: var(--accent); }

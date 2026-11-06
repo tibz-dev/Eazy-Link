@@ -186,3 +186,46 @@ askForm.addEventListener("submit", (event) => {
   window.location.assign(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`);
 });
 askForm.hidden = false;
+
+const chatLaunch = document.getElementById("chatLaunch");
+const chatPopup = document.getElementById("chatPopup");
+const whatsappLaunch = document.getElementById("whatsappLaunch");
+const whatsappPopup = document.getElementById("whatsappPopup");
+
+if (typeof chatPopup.showModal === "function") {
+  chatLaunch.hidden = false;
+  [[chatLaunch, chatPopup], [whatsappLaunch, whatsappPopup]].forEach(([launcher, popup]) => {
+    launcher.setAttribute("aria-controls", popup.id);
+    launcher.setAttribute("aria-expanded", "false");
+    launcher.addEventListener("click", (event) => {
+      event.preventDefault();
+      popup.showModal();
+      launcher.setAttribute("aria-expanded", "true");
+    });
+    popup.addEventListener("close", () => launcher.setAttribute("aria-expanded", "false"));
+  });
+}
+
+const chatTopics = {
+  packages: ["Compare packages for school leavers, graduates, professionals, and teams.", "#materials", "Compare packages"],
+  cv: ["The new graduate package includes CV writing, LinkedIn optimisation, and interview coaching.", "#graduates", "View the graduate package"],
+  jobs: ["Browse vacancies on the jobs portal, or use the application checklist to prepare.", "#opportunities", "Explore job resources"],
+  study: ["The matriculant package includes help with course choices, study applications, and bursaries.", "#matriculants", "View the matriculant package"],
+};
+
+const chatAnswer = document.getElementById("chatAnswer");
+const chatNext = document.getElementById("chatNext");
+
+chatPopup.querySelectorAll("[data-topic]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const [answer, href, label] = chatTopics[button.dataset.topic];
+    chatAnswer.textContent = answer;
+    chatNext.href = href;
+    chatNext.textContent = label;
+    chatNext.hidden = false;
+  });
+});
+
+[chatNext, document.getElementById("chatHuman")].forEach((link) => {
+  link.addEventListener("click", () => chatPopup.close());
+});

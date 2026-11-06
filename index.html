@@ -295,15 +295,15 @@
       <h2 id="chatTitle">EazyLink assistant</h2>
       <form method="dialog"><button type="submit" aria-label="Close chatbot">×</button></form>
     </div>
-    <p>Choose a topic for a quick answer.</p>
-    <div class="support-topics">
-      <button type="button" data-topic="packages">Packages</button>
-      <button type="button" data-topic="cv">CV and interviews</button>
-      <button type="button" data-topic="jobs">Finding jobs</button>
-      <button type="button" data-topic="study">Study applications</button>
+    <p class="chat-preview">Preview · Automated replies are coming later.</p>
+    <div class="chat-transcript" id="chatTranscript" role="log" aria-label="Chat messages" tabindex="0">
+      <p class="chat-message">Hi! This is the EazyLink assistant preview. Type a message to try the chat layout.</p>
     </div>
-    <p id="chatAnswer" role="status"></p>
-    <a id="chatNext" hidden></a>
+    <form class="chat-composer" id="chatForm">
+      <label for="chatInput">Your message</label>
+      <textarea id="chatInput" rows="2" maxlength="1000" required></textarea>
+      <button class="button" type="submit">Send preview</button>
+    </form>
     <a href="#ask-me" id="chatHuman">Ask the EazyLink team</a>
   </dialog>
 

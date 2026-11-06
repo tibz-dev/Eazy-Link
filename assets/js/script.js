@@ -206,26 +206,39 @@ if (typeof chatPopup.showModal === "function") {
   });
 }
 
-const chatTopics = {
-  packages: ["Compare packages for school leavers, graduates, professionals, and teams.", "#materials", "Compare packages"],
-  cv: ["The new graduate package includes CV writing, LinkedIn optimisation, and interview coaching.", "#graduates", "View the graduate package"],
-  jobs: ["Browse vacancies on the jobs portal, or use the application checklist to prepare.", "#opportunities", "Explore job resources"],
-  study: ["The matriculant package includes help with course choices, study applications, and bursaries.", "#matriculants", "View the matriculant package"],
-};
+const chatForm = document.getElementById("chatForm");
+const chatInput = document.getElementById("chatInput");
+const chatTranscript = document.getElementById("chatTranscript");
+const chatSend = chatForm.querySelector("button[type=submit]");
 
-const chatAnswer = document.getElementById("chatAnswer");
-const chatNext = document.getElementById("chatNext");
+function appendChatMessage(message, sender) {
+  const bubble = document.createElement("p");
+  bubble.className = "chat-message chat-message-" + sender;
+  bubble.textContent = message;
+  chatTranscript.append(bubble);
+  chatTranscript.scrollTop = chatTranscript.scrollHeight;
+}
 
-chatPopup.querySelectorAll("[data-topic]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const [answer, href, label] = chatTopics[button.dataset.topic];
-    chatAnswer.textContent = answer;
-    chatNext.href = href;
-    chatNext.textContent = label;
-    chatNext.hidden = false;
-  });
+async function requestAssistantReply(message) {
+  // Replace this preview reply with a call to your Gemini-backed server endpoint.
+  return "This chat is a preview. For a reply from EazyLink, use Ask Me or WhatsApp.";
+}
+
+chatForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const message = chatInput.value.trim();
+  if (!message || chatSend.disabled) return;
+
+  appendChatMessage(message, "visitor");
+  chatInput.value = "";
+  chatSend.disabled = true;
+  try {
+    appendChatMessage(await requestAssistantReply(message), "assistant");
+  } catch {
+    appendChatMessage("A reply is unavailable right now. You can still contact us on WhatsApp.", "assistant");
+  } finally {
+    chatSend.disabled = false;
+  }
 });
 
-[chatNext, document.getElementById("chatHuman")].forEach((link) => {
-  link.addEventListener("click", () => chatPopup.close());
-});
+document.getElementById("chatHuman").addEventListener("click", () => chatPopup.close());

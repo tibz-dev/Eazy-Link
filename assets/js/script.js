@@ -1,63 +1,95 @@
-'use strict';
+const CLOUD_NAME = "dshw6g6o8";
+const UPLOAD_PRESET = "eazylink_uploads";
 
+// Your WhatsApp number (digits only, no +)
+const WHATSAPP_NUMBER = "27748475208";
 
+const form = document.getElementById("eazylinkForm");
+const serviceSelect = document.getElementById("serviceSelect");
+const uploadSection = document.getElementById("uploadSection");
+const statusText = document.getElementById("statusText");
+const submitBtn = document.getElementById("submitBtn");
 
-/**
- * add Event on elements
- */
+serviceSelect.addEventListener("change", () => {
+  const service = serviceSelect.value;
+  uploadSection.hidden = !service || service === "General Enquiry";
+});
 
-const addEventOnElem = function (elem, type, callback) {
-  if (elem.length > 1) {
-    for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
+async function uploadToCloudinary(file) {
+  const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`;
+  const fd = new FormData();
+  fd.append("file", file);
+  fd.append("upload_preset", UPLOAD_PRESET);
+  fd.append("folder", "eazylink/uploads");
+
+  const res = await fetch(url, { method: "POST", body: fd });
+  if (!res.ok) throw new Error("Upload failed");
+  const data = await res.json();
+  return data.secure_url;
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  statusText.textContent = "";
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Uploading...";
+
+  try {
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("serviceSelect").value;
+    const pkg = document.getElementById("packageSelect").value;
+    const msg = document.getElementById("message").value.trim();
+
+    const cvFile = document.getElementById("cvFile").files[0];
+    const qualFile = document.getElementById("qualFile").files[0];
+    const otherFile = document.getElementById("otherFile").files[0];
+
+    const links = {};
+
+    // Upload only if service is NOT General Enquiry
+    if (service !== "General Enquiry" && service !== "") {
+      if (cvFile) links.CV = await uploadToCloudinary(cvFile);
+      if (qualFile) links.Qualifications = await uploadToCloudinary(qualFile);
+      if (otherFile) links.Supporting = await uploadToCloudinary(otherFile);
     }
-  } else {
-    elem.addEventListener(type, callback);
+
+    // Build WhatsApp message
+    let waMessage =
+`Hi, I would like to submit a request to EazyLink Careers.
+
+Name: ${fullName}
+Email: ${email}
+Phone: ${phone}
+Service: ${service}
+Package: ${pkg}
+Message: ${msg || "N/A"}`;
+
+    if (Object.keys(links).length > 0) {
+      waMessage += `
+
+Uploaded Files (Cloudinary links):`;
+      for (const k in links) {
+        waMessage += `
+${k}: ${links[k]}`;
+      }
+    }
+
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
+
+    submitBtn.textContent = "Opening WhatsApp...";
+    window.open(waLink, "_blank");
+
+    statusText.textContent = "Done. WhatsApp opened with your request.";
+    form.reset();
+    uploadSection.hidden = true;
+
+  } catch (err) {
+    console.error(err);
+    statusText.textContent = "Something went wrong while uploading. Please try again.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Submit Request";
   }
-}
-
-
-
-/**
- * navbar toggle
- */
-
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-const overlay = document.querySelector("[data-overlay]");
-
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-addEventOnElem(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () {
-  navbar.classList.remove("active");
-  overlay.classList.remove("active");
-}
-
-addEventOnElem(navbarLinks, "click", closeNavbar);
-
-
-
-/**
- * header & back top btn show when scroll down to 100px
- */
-
-const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-const headerActive = function () {
-  if (window.scrollY > 80) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
-}
-
-addEventOnElem(window, "scroll", headerActive);
+});

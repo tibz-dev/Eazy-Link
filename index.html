@@ -1,1105 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en-ZA">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
-  <title>Eazy Link Group</title>
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Career mentorship, application support and professional development from EazyLink Careers in South Africa.">
+  <title>EazyLink Careers | Career support in South Africa</title>
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-
+  <script src="./assets/js/script.js" defer></script>
 </head>
-
-<body id="top">
-
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#home" class="logo"><img src="assets/images/logo.png" alt="Eazy Links Logo"></a>
-
-      <nav class="navbar" data-navbar>
-
-        <div class="wrapper">
-          <a href="#" class="logo">Eazy Link Group</a>
-
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#service" class="navbar-link" data-nav-link>Services</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#feature" class="navbar-link" data-nav-link>Features</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#materials" class="navbar-link" data-nav-link>Pricing</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
-          </li>
-          
-
-        </ul>
-
-      </nav>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-      </button>
-
-      <a href="http://www.eazylinkjobs.co.za/" class="btn btn-primary has-before has-after">Log In👋</a>
-
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
-    </div>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead wrap">
+    <a href="./" class="brand"><img src="./assets/images/logo.png" width="466" height="208" alt="EazyLink Careers home"></a>
+    <nav aria-label="Main navigation">
+      <a href="#service">Services</a>
+      <a href="#materials">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="portal" href="https://www.eazylinkjobs.co.za/">Jobs portal <span aria-hidden="true">↗</span></a>
   </header>
 
+  <main id="main">
+    <section class="intro wrap" id="home" aria-labelledby="headline">
+      <div class="intro-copy">
+        <p class="eyebrow">Career support in South Africa</p>
+        <h1 id="headline">What’s your<br> next move?</h1>
+        <p>Choose a course, prepare for your first interview, or plan a career change with practical support from EazyLink Careers.</p>
+        <a class="button" href="#materials">Explore packages <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="index-panel" aria-label="Find your starting point">
+        <p class="eyebrow">Find your starting point</p>
+        <a href="#matriculants"><small>01</small> I’m finishing school <span aria-hidden="true">↘</span></a>
+        <a href="#graduates"><small>02</small> I’m starting my career <span aria-hidden="true">↘</span></a>
+        <a href="#professionals"><small>03</small> I’m ready for a change <span aria-hidden="true">↘</span></a>
+        <a href="#teams"><small>04</small> I’m developing a team <span aria-hidden="true">↘</span></a>
+      </aside>
+    </section>
 
-
-
-
-  <main>
-    <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-    <section class="section hero" id="home" aria-label="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="h1 hero-title">
-            Connecting You to<span class="has-before">Opportunities With</span> Ease.
-          </h1>
-          <p class="hero-text">
-            We, the Eazylink Consulting team, are mentorship and career-development specialists dedicated to guiding students, graduates, and professionals toward meaningful opportunities. 
-            We connect talent to growth by providing expert coaching, application support, and access to verified job opportunities in a fast-changing world.
-          </p>
-
-          <div class="wrapper">
-            <a href="#service" class="btn btn-primary has-before has-after">Our Services</a>
-
-            <a href="#mentorship" class="hero-btn" aria-label="Eazy Link promo">
-              <ion-icon name="play-outline" aria-hidden="true"></ion-icon>
-              <span class="span">Meet Our Mentors</span>
-            </a>
-          </div>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link" style="--color: hsl(241, 77%, 63%);">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <span class="span">Facebook</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link" style="--color: hsl(0, 100%, 50%);">
-                <ion-icon name="logo-youtube"></ion-icon>
-                <span class="span">YouTube</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link" style="--color: hsl(203, 76%, 51%);">
-                <ion-icon name="logo-linkedin"></ion-icon>
-                <span class="span">LinkedIn</span>
-              </a>
-            </li>
-          </ul>
-
+    <section class="service-band" id="service" aria-labelledby="service-title">
+      <div class="wrap section-grid">
+        <div>
+          <p class="eyebrow">01 / Services</p>
+          <h2 id="service-title">Get help with the next step.</h2>
         </div>
-
-        <figure class="hero-banner">
-          <img src="./assets/images/hero-banner.png" width="794" height="637" alt="Eazy Link Hero Banner" class="w-100">
-        </figure>
-
+        <div class="service-list">
+          <details open><summary>Career mentorship and guidance</summary><p>Work through career choices, course selection, and professional transitions with a mentor.</p></details>
+          <details><summary>CVs, interviews and applications</summary><p>Get help with CV writing, LinkedIn, interview preparation, and job or study applications.</p></details>
+          <details><summary>Job opportunities and placement support</summary><p>Explore the jobs portal for listings and ask about placement and job matching support.</p></details>
+          <details><summary>Academic support</summary><p>Get guidance on academic planning, homework, and assignments.</p></details>
+          <details><summary>Professional and corporate development</summary><p>Ask about leadership training, soft skills workshops, performance coaching, and team development.</p></details>
+        </div>
       </div>
     </section>
 
-
-
-
-
-
-      <!-- 
-        - #SERVICE
-      -->
-
-   <section class="section service" id="service" aria-label="service">
-  <div class="container">
-
-    <p class="section-subtitle has-before text-center">Our Services</p>
-
-    <h2 class="h2 section-title text-center">
-      END-TO-END CAREER SOLUTIONS <span class="has-before"> TO HELP YOU</span> GROW WITH EASE.  
-    </h2>
-
-    <ul class="grid-list">
-
-      <li>
-        <div class="service-card" style="--color: 210, 100%, 53%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="person-circle-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Career Mentorship</a></h3>
-            <!-- Hidden description -->
-          <div class="service-desc">
-            <ion-icon name="document-text-outline" size="medium"></ion-icon>
-            <p>
-              Receive personalised one-on-one mentorship to define your career goals, build confidence, and navigate your professional journey.
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card" style="--color: 267, 76%, 57%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="trending-up-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Professional Development</a></h3>
-          
-          <div class="service-desc">
-            <ion-icon name="document-text-outline" size="medium"></ion-icon>
-            <p>
-              Receive personalised one-on-one mentorship to define your career goals, build confidence, and navigate your professional journey.Enhance your CV, LinkedIn profile, interview skills, and workplace readiness with expert guidance to boost employability.
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card" style="--color: 343, 98%, 60%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="clipboard-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Job Board & Placement</a></h3>
-          <!-- Hidden description -->
-          <div class="service-desc">
-            <ion-icon name="document-text-outline" size="medium"></ion-icon>
-            <p>
-              Access verified job listings, graduate programs, and internships, and get matched with opportunities that align with your goals.
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card" style="--color: 17, 100%, 68%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="send-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Application Submissions</a></h3>
-          <!-- Hidden description -->
-          <div class="service-desc">
-            <ion-icon name="document-text-outline" size="medium"></ion-icon>
-            <p>
-              We submit job, university, bursary, and scholarship applications on your behalf—accurately, professionally, and on time.
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card" style="--color: 157, 89%, 44%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="school-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Academic & Career Advisory</a></h3>
-          <!-- Hidden description -->
-          <div class="service-desc">
-            <ion-icon name="document-text-outline" size="medium"></ion-icon>
-            <p>
-              Get expert guidance on course selection, study pathways, career transitions, and choosing the right institution for your future.            </p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card" style="--color: 52, 98%, 50%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="podium-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Corporate Training</a></h3>
-          <!-- Hidden description -->
-          <div class="service-desc">
-            <ion-icon name="document-text-outline" size="medium"></ion-icon>
-            <p>
-              We deliver tailored workshops on leadership, teamwork, communication, and professional growth for organisations and teams. </p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card" style="--color: 174, 77%, 50%" onclick="toggleService(this)">
-          <div class="card-icon">
-            <ion-icon name="document-text-outline" size="large"></ion-icon>
-          </div>
-          <h3 class="h3"><a href="javascript:void(0)" class="card-title">Homework & Assignments</a></h3>
-        </div>
-      </li>
-
-      <li>
-        <a href="#" class="link-card" style="--color: 203, 97%, 75%" onclick="toggleService(this)">
-          <span class="span">Online Platforms</span>
-          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-        </a>
-      </li>
-
-    </ul>
-  </div>
+    <section class="wrap section-grid" id="materials" aria-labelledby="package-title">
+      <div>
+        <p class="eyebrow">02 / Packages</p>
+        <h2 id="package-title">Support for your stage.</h2>
+      </div>
+      <div class="packages">
+        <article id="matriculants"><h3>Matriculants</h3><p class="price">From R399 <small>once-off</small></p><p>Career guidance, course selection, university and college applications, and bursary support.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="graduates"><h3>New graduates</h3><p class="price">From R799 <small>per year</small></p><p>CV writing, LinkedIn optimisation, job application support, and interview coaching.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="professionals"><h3>Professional growth</h3><p class="price">From R1,299 <small>per year</small></p><p>One-on-one mentorship, career transitions, personal branding, and job matching.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
+        <article id="teams"><h3>Corporate training</h3><p class="price">Custom pricing</p><p>Leadership and soft skills workshops, team development, and performance coaching.</p><a href="#contact">Enquire <span aria-hidden="true">↗</span></a></article>
+      </div>
     </section>
 
-
-
-
-
-
-      <!-- 
-        - #FEATURE
-      -->
-
-  <section class="section feature" id="feature" aria-label="feature">
-    <div class="container">
-
-      <figure class="feature-banner">
-        <img src="./assets/images/feature-banner.png" width="582" height="585" loading="lazy" alt="A.S. Tutoring feature"
-          class="w-100">
-      </figure>
-
-      <div class="feature-content">
-
-        <p class="section-subtitle has-before">Why Choose Us</p>
-
-        <h2 class="h2 section-title">
-          What You Can Expect <span class="has-before">From Eazy LINK</span>
-        </h2>
-
-        <ul class="feature-list">
-
-          <li>
-            <div class="feature-card">
-
-              <div class="card-icon" style="--color: 174, 77%, 50%">
-                <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
-              </div>
-
-              <div>
-                <h3 class="h3 card-title">Mentorship & Coaching</h3>
-                <p class="card-text">
-                  We provide expert guidance to help students, graduates, and professionals make informed career decisions and grow their skills.
-                </p>
-              </div>
-
-            </div>
-          </li>
-
-          <li>
-            <div class="feature-card">
-
-              <div class="card-icon" style="--color: 241, 77%, 63%;">
-                <ion-icon name="people-sharp" aria-hidden="true"></ion-icon>
-              </div>
-
-              <div>
-                <h3 class="h3 card-title">Application Support</h3>
-                <p class="card-text">
-                  Our team assists with CV building, application submissions, and interview preparation to boost your chances of success.
-                </p>
-              </div>
-
-            </div>
-          </li>
-
-          <li>
-            <div class="feature-card">
-
-              <div class="card-icon" style="--color: 343, 98%, 60%;">
-                <ion-icon name="compass-outline" aria-hidden="true"></ion-icon>
-              </div>
-
-              <div>
-                <h3 class="h3 card-title">Verified Opportunities</h3>
-                <p class="card-text">
-                  Access internships, graduate programs, and professional roles verified by our team.
-                </p>
-              </div>
-
-            </div>
-          </li>
-
+    <section class="resource-band" id="opportunities" aria-labelledby="resource-title">
+      <div class="wrap section-grid">
+        <div><p class="eyebrow">03 / Opportunities</p><h2 id="resource-title">Find places to look.</h2></div>
+        <ul class="resource-list">
+          <li><a href="https://www.eazylinkjobs.co.za/">EazyLink jobs portal ↗</a></li>
+          <li><a href="https://www.linkedin.com/jobs/">LinkedIn Jobs ↗</a></li>
+          <li><a href="https://www.indeed.com/">Indeed ↗</a></li>
+          <li><a href="https://remoteok.com/">Remote OK ↗</a></li>
+          <li><a href="https://www.scholarships.com/">Scholarships.com ↗</a></li>
+          <li><a href="https://www.chevening.org/">Chevening ↗</a></li>
+          <li><a href="https://erasmus-plus.ec.europa.eu/">Erasmus+ ↗</a></li>
         </ul>
-
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="wrap section-grid" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">04 / Contact</p>
+        <h2 id="contact-title">Tell us what you need.</h2>
+        <p>Complete the form to prepare your enquiry and open it in WhatsApp.</p>
+        <address> Pretoria, South Africa<br>
+          <a href="mailto:info@eazylinkjobs.co.za">info@eazylinkjobs.co.za</a><br>
+          <a href="tel:+27748475208">+27 74 847 5208</a>
+        </address>
+      </div>
+      <form id="eazylinkForm">
 
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="Email Address" required>
 
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
 
+        <label for="serviceSelect">Service</label>
+        <select id="serviceSelect" required>
+          <option value="">Select Service</option>
+          <option>Career Mentorship</option>
+          <option>Professional Development</option>
+          <option>Job Board & Placement</option>
+          <option>Application Submissions</option>
+          <option>Academic & Career Advisory</option>
+          <option>Corporate Training</option>
+          <option>Homework & Assignments</option>
+          <option>Online Platforms</option>
+          <option>General Enquiry</option>
+        </select>
 
+        <label for="packageSelect">Package</label>
+        <select id="packageSelect" required>
+          <option value="">Select Pricing Package</option>
+          <option>Matriculant – R399 Once-off</option>
+          <option>New Graduate – R799 / annum</option>
+          <option>Professional Growth – R1,299 / annum</option>
+          <option>Corporate – Custom Pricing</option>
+        </select>
 
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Tell us what you need..."></textarea>
 
-      <!-- 
-        - #PRICING
-      -->
+        <div id="uploadSection" hidden>
+          <label for="cvFile">Upload CV</label>
+          <input type="file" id="cvFile" accept=".pdf,.doc,.docx">
 
-    <section class="section project" id="materials" aria-label="materials">
-  <div class="container">
+          <label for="qualFile">Upload Qualifications</label>
+          <input type="file" id="qualFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
 
-    <p class="section-subtitle has-before text-center">Affordable. Transparent. Results-driven.</p>
-
-    <h2 class="h2 section-title text-center">
-      Eazy Link Pricing <span class="has-before">Packages</span>
-    </h2>
-
-    <ul class="filter-list">
-      <li><button class="filter-btn" data-filter-btn>New Graduates</button></li>
-      <li><button class="filter-btn" data-filter-btn>Professionals</button></li>
-      <li><button class="filter-btn" data-filter-btn>Corporate</button></li>
-      <li><button class="filter-btn" data-filter-btn>Matriculants</button></li>
-    </ul>
-
-    <ul class="grid-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; list-style: none; padding: 0;">
-
-   
-       <!-- New Graduates -->
-      <li class="grid-item students">
-        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
-          <h3>New Graduates</h3>
-          <p><strong>From R799/annum</strong></p>
-          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
-            <li>CV Writing</li>
-            <li>LinkedIn Optimisation</li>
-            <li>Job Applications</li>
-            <li>Interview Coaching</li>
-          </ul>
-          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
+          <label for="otherFile">Other Documents</label>
+          <input type="file" id="otherFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
         </div>
-      </li>
-       <!-- Professional Growth -->
-      <li class="grid-item students">
-        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
-          <h3>Professional Growth</h3>
-          <p><strong>From R1,299/annum</strong></p>
-          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
-            <li>1-on-1 Mentorship</li>
-            <li>Career Transition</li>
-            <li>Personal Branding</li>
-            <li>Job Matching</li>
-          </ul>
-          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
-        </div>
-      </li>
 
+        <button type="submit" class="button" id="submitBtn">
+          Submit Request
+        </button>
 
-       <!--Corporate Training -->
-      <li class="grid-item students">
-        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
-          <h3>Corporate Training</h3>
-          <p><strong>Custom Pricing</strong></p>
-          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
-            <li>Leadership Training</li>
-            <li>Soft Skills Workshops</li>
-            <li>Team Development</li>
-            <li>Performance Coaching</li>
-          </ul>
-          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
-        </div>
-      </li>
-         <!-- Grade 12s Starter -->
-      <li class="grid-item students">
-        <div class="project-card" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #ddd; padding: 1.5rem; border-radius: 10px;">
-          <h3>Matriculants</h3>
-          <p><strong>From R399 once-off</strong></p>
-          <ul style="text-align:center; margin: 1rem 0; padding-left: 1.2rem;">
-            <li>Career Guidance</li>
-            <li>University & College Applications</li>
-            <li>Bursary Applications</li>
-            <li>Course Selection</li>
-          </ul>
-          <a href="#contact" style="background: #007bff; color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Get Started</a>
-        </div>
-      </li>
-    </ul>
+        <p id="statusText" role="status"></p>
 
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-      <!-- 
-        - #NEWSLETTER
-      -->
-
-      <section id="newsletters" class="section newsletter has-bg-image" aria-label="newsletter"
-        style="background-image: url('./assets/images/newsletter-bg.jpg')">
-        <div class="container">
-
-          <figure class="newsletter-banner">
-            <img src="./assets/images/newsletter-banner.png" width="355" height="356" loading="lazy"
-              alt="newsletter banner" class="w-100">
-          </figure>
-
-          <div class="newsletter-content">
-
-            <p class="section-subtitle has-before">Get every update</p>
-
-            <h2 class="h2 section-title">Subscribe newslater get latest updates and deals</h2>
-
-            <form action="" class="newsletter-form">
-              <input type="email" name="email_address" placeholder="Enter your mail" required class="email-field">
-
-              <button type="submit" class="btn btn-secondary has-before has-after">
-                <span class="span">Subscribe</span>
-
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </button>
-            </form>
-
-          </div>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #Mentorship
-      -->
-      <section class="section mentorship" id="mentorship" aria-label="Our Mentors">
-        <div class="container">
-
-          <p class="section-subtitle text-center has-before">Meet Our Experts</p>
-
-          <h2 class="h2 section-title text-center">
-            Find Your <span class="has-before">Mentor</span>
-          </h2>
-
-          <div class="mentor-selection text-center" style="margin-bottom:2rem;">
-            <p>Select the career you want to pursue:</p>
-
-            <select id="careerInterest" style="padding:0.5rem; margin-right:0.5rem; border-radius:5px;">
-              <option value="">--Select a Career--</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Programming">Programming</option>
-              <option value="Entrepreneurship">Entrepreneurship</option>
-              <option value="Science">Science</option>
-            </select>
-
-            <a href="javascript:void(0);" onclick="findMentor()" class="btn btn-primary has-before has-after">
-              Find Mentor👋
-            </a>
-          </div>
-
-          <div id="mentorResults" class="mentor-results" 
-              style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem;">
-            <!-- Mentor cards will appear here -->
-          </div>
-
-        </div>
-      </section>
-
-      <script>
-        // Mentor database
-        const mentors = [
-          {
-            name: "John Smith",
-            field: "Engineering",
-            bio: "Helps students with mechanical & software engineering projects.",
-            photo: "team-1.jpg"
-          },
-          {
-            name: "Mary Jones",
-            field: "Programming",
-            bio: "Guides kids in Python, Java & web development.",
-            photo: "team-2.jpg"
-          },
-          {
-            name: "Sarah Lee",
-            field: "Entrepreneurship",
-            bio: "Mentors on business, startups, and turning ideas into income.",
-            photo: "team-3.jpg"
-          }
-        ];
-
-        function findMentor() {
-          const interest = document.getElementById('careerInterest').value;
-          const resultsDiv = document.getElementById('mentorResults');
-          resultsDiv.innerHTML = ""; // clear previous results
-
-          if (!interest) {
-            resultsDiv.innerHTML = "<p>Please select a career interest first.</p>";
-            return;
-          }
-
-          const matches = mentors.filter(mentor => mentor.field === interest);
-
-          if(matches.length > 0) {
-            matches.forEach(mentor => {
-              const card = document.createElement('div');
-              card.classList.add('mentor-card');
-              card.style.width = "220px";
-              card.style.border = "1px solid #ccc";
-              card.style.borderRadius = "10px";
-              card.style.padding = "1rem";
-              card.style.textAlign = "center";
-              card.style.backgroundColor = "#f9f9f9";
-              card.style.position = "relative";
-
-              // WhatsApp booking link
-              const whatsappNumber = "+27748475208"; // your WhatsApp number
-              const message = encodeURIComponent(`Hi, I would like to book ${mentor.name} as my mentor. Can I have availability?`);
-              const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-              card.innerHTML = `
-                <div>
-                  <img src="./assets/images/${mentor.photo}" alt="${mentor.name}" 
-                      style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:1rem;">
-                </div>
-
-                <h3>${mentor.name}</h3>
-                <p style="font-size:0.9rem; margin-bottom:0.5rem;">${mentor.bio}</p>
-
-                <a href="${whatsappLink}" target="_blank" 
-                  class="btn btn-primary has-before has-after" 
-                  style="
-                    padding:6px 12px;          /* vertical + horizontal padding */
-                    font-size:0.85rem;
-                    border-radius:4px;         /* rectangle style */
-                    text-decoration:none;
-                    display:inline-block;
-                    width:auto;                /* shrink to fit text */
-                  ">
-                  Book Me
-                </a>
-              `;
-
-              resultsDiv.appendChild(card);
-            });
-          } else {
-            resultsDiv.innerHTML = `<p>Sorry, we currently don’t have a mentor for ${interest}. We’ll notify you when one becomes available!</p>`;
-          }
-        }
-      </script>
-
-
-      <!--
-      Opportunities Hub
-      -->
-      <section class="section opportunities" id="opportunities" aria-label="Opportunities Hub">
-        <div class="container">
-
-          <p class="section-subtitle has-before text-center">Global Access</p>
-
-          <h2 class="h2 section-title text-center">
-            Opportunities <span class="has-before">Hub</span>
-          </h2>
-
-          <p style="text-align:center; max-width:700px; margin:0 auto;">
-            We connect students and professionals to verified global job platforms, scholarships, bursaries,
-            internships and remote work opportunities outside South Africa.
-          </p>
-
-          <div class="opportunity-grid" id="opportunityGrid">
-            <!-- Opportunities loaded here -->
-          </div>
-
-        </div>
-      </section>
-
-      <script>
-const opportunities = [
-  {
-    title: "LinkedIn Jobs (Global)",
-    description: "Search international and remote jobs from verified global companies.",
-    type: "Job Platform",
-    link: "https://www.linkedin.com/jobs"
-  },
-  {
-    title: "Indeed Worldwide",
-    description: "Find jobs in the USA, UK, Europe and remote positions.",
-    type: "Job Platform",
-    link: "https://www.indeed.com"
-  },
-  {
-    title: "Scholarships.com",
-    description: "Global scholarships for undergraduate and postgraduate students.",
-    type: "Scholarship",
-    link: "https://www.scholarships.com"
-  },
-  {
-    title: "Chevening Scholarships",
-    description: "UK government funded scholarships for international students.",
-    type: "Scholarship",
-    link: "https://www.chevening.org"
-  },
-  {
-    title: "Erasmus+",
-    description: "Study, training and exchange programmes across Europe.",
-    type: "Scholarship",
-    link: "https://erasmus-plus.ec.europa.eu"
-  },
-  {
-    title: "Remote OK",
-    description: "Remote jobs in tech, marketing, design and customer support.",
-    type: "Remote Jobs",
-    link: "https://remoteok.com"
-  }
-];
-
-const grid = document.getElementById("opportunityGrid");
-
-opportunities.forEach(op => {
-  const card = document.createElement("div");
-  card.classList.add("opportunity-card");
-
-  card.innerHTML = `
-    <span class="opportunity-tag">${op.type}</span>
-    <h3>${op.title}</h3>
-    <p>${op.description}</p>
-    <a href="${op.link}" target="_blank" class="btn btn-primary has-before has-after">
-      Visit
-    </a>
-  `;
-
-  grid.appendChild(card);
-});
-      </script>
-
-
-
-      <!--
-      - #Contact
-      -->
-      <section class="section contact" id="contact" aria-label="contact">
-        <div class="container">
-
-          <p class="section-subtitle has-before text-center">Get in Touch</p>
-          <h2 class="h2 section-title text-center">
-            Eazy Link <span class="has-before">Client Portal</span>
-          </h2>
-
-          <div class="contact-wrapper">
-
-            <!-- Info -->
-            <div class="contact-info">
-              <div class="contact-box"><ion-icon name="location-outline"></ion-icon> Pretoria, South Africa</div>
-              <div class="contact-box"><ion-icon name="mail-outline"></ion-icon> info@eazylinkjobs.co.za</div>
-              <div class="contact-box"><ion-icon name="call-outline"></ion-icon> +27 74 847 5208</div>
-            </div>
-
-            <!-- Form -->
-            <div class="contact-form">
-  <form id="eazylinkForm">
-
-    <div class="input-group">
-      <input type="text" id="fullName" placeholder="Full Name" required>
-      <input type="email" id="email" placeholder="Email Address" required>
-    </div>
-
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-
-    <!-- Service -->
-    <select id="serviceSelect" required>
-      <option value="">Select Service</option>
-      <option>Career Mentorship</option>
-      <option>Professional Development</option>
-      <option>Job Board & Placement</option>
-      <option>Application Submissions</option>
-      <option>Academic & Career Advisory</option>
-      <option>Corporate Training</option>
-      <option>Homework & Assignments</option>
-      <option>Online Platforms</option>
-      <option>General Enquiry</option>
-    </select>
-
-    <!-- Package -->
-    <select id="packageSelect" required>
-      <option value="">Select Pricing Package</option>
-      <option>Matriculant – R399 Once-off</option>
-      <option>New Graduate – R799 / annum</option>
-      <option>Professional Growth – R1,299 / annum</option>
-      <option>Corporate – Custom Pricing</option>
-    </select>
-
-    <textarea id="message" rows="4" placeholder="Tell us what you need..."></textarea>
-
-    <!-- Uploads -->
-    <div id="uploadSection" style="display:none;">
-      <label>Upload CV</label>
-      <input type="file" id="cvFile" accept=".pdf,.doc,.docx">
-
-      <label>Upload Qualifications</label>
-      <input type="file" id="qualFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
-
-      <label>Other Documents</label>
-      <input type="file" id="otherFile" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
-    </div>
-
-    <button type="submit" class="btn btn-primary has-before has-after" id="submitBtn">
-      Submit Request
-    </button>
-
-    <p id="statusText" style="margin-top:12px;"></p>
-
-  </form>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </article>
+      </form>
+    </section>
   </main>
 
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
   <footer class="footer">
-    <div class="container">
-
-      <div class="footer-top section">
-
-        <div class="footer-brand">
-
-          <p class="footer-list-title">About Eazy Link</p>
-
-          <p class="footer-text">
-            The Eazy Link Group is a career-development specialists dedicated to guiding students, graduates, and professionals toward meaningful opportunities. 
-            We connect talent to growth by providing expert coaching, application support, and access to verified job opportunities in a fast-changing world.
-          </p>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-skype"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Usefull Links</p>
-          </li>
-
-          <li>
-            <a href="#contact" class="footer-link">Contact us</a>
-          </li>
-
-          <li>
-            <a href="/documents/eazylink_consentform.pdf" class="footer-link">Consent Form</a>
-          </li>
-          <li>
-            <a href="./documents/easylink_policies.pdf" class="footer-link">Policies</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Community</p>
-          </li>
-
-          <li>
-            <a href="#contact" class="footer-link">Help Center</a>
-          </li>
-
-      
-
-          <li>
-            <a href="#opportunities" class="footer-link">Opportunities</a>
-          </li>
-
-          <li>
-            <a href="http://www.eazylinkjobs.co.za/" class="footer-link">Job Listings</a>
-          </li>
-
-          <li>
-            <a href="#newsletters" class="footer-link">Newsletters</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Social Media</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Facebook</a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">Twitter</a>
-          </li>
-          <li>  
-            <a href="#" class="footer-link">LinkedIn</a>
-          </li>
-          <li>  
-            <a href="#" class="footer-link">YouTube</a> 
-          </li>
-
-        </ul>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <p class="copyright">
-          &copy; 2025 Eazy Link. All Rights Reserved by Eazy Link Group.
-        </p>
-
-        <ul class="footer-bottom-list">
-
-          <li>
-            <a href="./documents/easylink_policies.pdf" class="footer-bottom-link">Terms and conditions</a>
-          </li>
-
-          <li>
-            <a href="./documents/easylink_policies.pdf" class="footer-bottom-link">Privacy policy</a>
-          </li>
-
-          <li>
-            <a href="https://www.eazylinkjobs.co.za/" class="footer-bottom-link">Login / Signup</a>
-          </li>
-
-        </ul>
-
-      </div>
-
+    <div class="wrap footer-inner">
+      <p>EazyLink Careers · Pretoria, South Africa</p>
+      <nav aria-label="Documents">
+        <a href="./documents/easylink_policies.pdf">Policies</a>
+        <a href="./documents/eazylink_consentform.pdf">Consent form</a>
+        <a href="./documents/easylink_subscription.pdf">Subscription</a>
+      </nav>
     </div>
   </footer>
-
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-  function toggleService(card) {
-    card.classList.toggle("active");
-  }
-</script>
-
-<!--
-file upload toggle script
--->
-  <script>
-  function toggleUploads() {
-    const service = document.getElementById("serviceSelect").value;
-    const uploads = document.getElementById("uploadSection");
-
-    if (service === "General Enquiry" || service === "") {
-      uploads.style.display = "none";
-    } else {
-      uploads.style.display = "block";
-    }
-  }
-  </script>
-
-  <script>
-const CLOUD_NAME = "dshw6g6o8";
-const UPLOAD_PRESET = "eazylink_uploads";
-
-// Your WhatsApp number (digits only, no +)
-const WHATSAPP_NUMBER = "27748475208";
-
-const form = document.getElementById("eazyLinkForm");
-const serviceSelect = document.getElementById("serviceSelect");
-const uploadSection = document.getElementById("uploadSection");
-const statusText = document.getElementById("statusText");
-const submitBtn = document.getElementById("submitBtn");
-
-serviceSelect.addEventListener("change", () => {
-  const service = serviceSelect.value;
-  uploadSection.style.display = (service && service !== "General Enquiry") ? "block" : "none";
-});
-
-async function uploadToCloudinary(file) {
-  const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`;
-  const fd = new FormData();
-  fd.append("file", file);
-  fd.append("upload_preset", UPLOAD_PRESET);
-  fd.append("folder", "eazylink/uploads");
-
-  const res = await fetch(url, { method: "POST", body: fd });
-  if (!res.ok) throw new Error("Upload failed");
-  const data = await res.json();
-  return data.secure_url;
-}
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  statusText.textContent = "";
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Uploading...";
-
-  try {
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("serviceSelect").value;
-    const pkg = document.getElementById("packageSelect").value;
-    const msg = document.getElementById("message").value.trim();
-
-    const cvFile = document.getElementById("cvFile").files[0];
-    const qualFile = document.getElementById("qualFile").files[0];
-    const otherFile = document.getElementById("otherFile").files[0];
-
-    const links = {};
-
-    // Upload only if service is NOT General Enquiry
-    if (service !== "General Enquiry" && service !== "") {
-      if (cvFile) links.CV = await uploadToCloudinary(cvFile);
-      if (qualFile) links.Qualifications = await uploadToCloudinary(qualFile);
-      if (otherFile) links.Supporting = await uploadToCloudinary(otherFile);
-    }
-
-    // Build WhatsApp message
-    let waMessage =
-`Hi, I would like to submit a request on Eazy Link.
-
-Name: ${fullName}
-Email: ${email}
-Phone: ${phone}
-Service: ${service}
-Package: ${pkg}
-Message: ${msg || "N/A"}`;
-
-    if (Object.keys(links).length > 0) {
-      waMessage += `
-
-Uploaded Files (Cloudinary links):`;
-      for (const k in links) {
-        waMessage += `
-${k}: ${links[k]}`;
-      }
-    }
-
-    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
-
-    submitBtn.textContent = "Opening WhatsApp...";
-    window.open(waLink, "_blank");
-
-    statusText.textContent = "Done. WhatsApp opened with your request.";
-    form.reset();
-    uploadSection.style.display = "none";
-
-  } catch (err) {
-    console.error(err);
-    statusText.textContent = "Something went wrong while uploading. Please try again.";
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Submit Request";
-  }
-});
-  </script>
-
-
-
-
 </body>
-
 </html>

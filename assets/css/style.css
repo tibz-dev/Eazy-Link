@@ -210,3 +210,17 @@ form textarea { resize: vertical; }
 }
 .checklist-actions button { cursor: pointer; }
 .resource-filter:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
+
+form[hidden] { display: none; }
+.directory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; }
+.directory-grid > *, .directory-note {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+  background: var(--panel);
+}
+.directory-grid > a { text-decoration: none; font-weight: 700; }
+.directory-grid > a:hover { border-color: var(--accent); }
+.directory-grid span { display: block; color: var(--muted); font-weight: 400; }
+.directory-note h3 { margin-bottom: .4rem; }
+#askForm { max-width: 42rem; }

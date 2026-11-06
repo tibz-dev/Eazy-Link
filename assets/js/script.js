@@ -171,3 +171,18 @@ function filterResources() {
 resourceCategory.addEventListener("change", filterResources);
 filterResources();
 document.getElementById("resourceFilter").hidden = false;
+
+const askForm = document.getElementById("askForm");
+const askQuestion = document.getElementById("askQuestion");
+
+askForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const question = askQuestion.value.trim();
+  if (!question) {
+    askQuestion.focus();
+    return;
+  }
+  const message = encodeURIComponent("Hi EazyLink Careers, I have a question:\n\n" + question);
+  window.location.assign(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`);
+});
+askForm.hidden = false;

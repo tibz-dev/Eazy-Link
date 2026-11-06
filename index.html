@@ -14,9 +14,11 @@
   <header class="masthead wrap">
     <a href="./" class="brand"><img src="./assets/images/logo.png" width="466" height="208" alt="EazyLink Careers home"></a>
     <nav aria-label="Main navigation">
-      <a href="#service">Services</a>
+      <a href="#about">About us</a>
+      <a href="#products">Products</a>
       <a href="#materials">Packages</a>
-      <a href="#faq">FAQ</a>
+      <a href="#faq">Help centre</a>
+      <a href="#ask-me">Ask Me</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="portal" href="https://www.eazylinkjobs.co.za/">Jobs portal <span aria-hidden="true">↗</span></a>
@@ -40,6 +42,11 @@
       <a href="#teams"><small>04 / Lead</small> Developing a team <span aria-hidden="true">↘</span></a>
     </nav>
 
+    <section class="wrap section-grid" id="about" aria-labelledby="about-title">
+      <div><p class="eyebrow">About us</p><h2 id="about-title">Career support from Pretoria.</h2></div>
+      <p>EazyLink Careers helps people make study and career decisions, prepare applications, and build workplace skills. Our services cover school leavers, graduates, working professionals, and teams.</p>
+    </section>
+
     <section class="service-band" id="service" aria-labelledby="service-title">
       <div class="wrap section-grid">
         <div>
@@ -52,6 +59,26 @@
           <details><summary>Job opportunities and placement support</summary><p>Explore the jobs portal for listings and ask about placement and job matching support.</p></details>
           <details><summary>Academic support</summary><p>Get guidance on academic planning, homework, and assignments.</p></details>
           <details><summary>Professional and corporate development</summary><p>Ask about leadership training, soft skills workshops, performance coaching, and team development.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section-grid" id="products" aria-labelledby="products-title">
+      <div><p class="eyebrow">Products</p><h2 id="products-title">Tools and services.</h2></div>
+      <div class="directory-grid">
+        <a href="https://www.eazylinkjobs.co.za/">Jobs portal <span>Browse vacancies ↗</span></a>
+        <a href="#materials">Career packages <span>Compare coaching and application support ↘</span></a>
+        <a href="#checklist">Application toolkit <span>Track your preparation ↘</span></a>
+      </div>
+    </section>
+
+    <section class="resource-band" id="industries" aria-labelledby="industries-title">
+      <div class="wrap section-grid">
+        <div><p class="eyebrow">Industries</p><h2 id="industries-title">Find support for your sector.</h2></div>
+        <div class="directory-grid">
+          <div><strong>Education</strong><span>Course choices, study applications and bursary support.</span></div>
+          <div><strong>Recruitment and employment</strong><span>Job search, CV preparation and interview coaching.</span></div>
+          <div><strong>Workplace development</strong><span>Leadership, soft skills and team training across sectors.</span></div>
         </div>
       </div>
     </section>
@@ -124,16 +151,43 @@
       </div>
     </section>
 
+    <section class="wrap section-grid" id="customers" aria-labelledby="customers-title">
+      <div><p class="eyebrow">Our customers</p><h2 id="customers-title">Who we serve.</h2></div>
+      <div class="directory-grid">
+        <a href="#matriculants">School leavers <span>Plan what to study next ↘</span></a>
+        <a href="#graduates">Graduates <span>Prepare for your first role ↘</span></a>
+        <a href="#professionals">Professionals <span>Plan your next career move ↘</span></a>
+        <a href="#teams">Teams <span>Explore workplace training ↘</span></a>
+      </div>
+      <div id="testimonials" class="directory-note">
+        <h3>Testimonials</h3>
+        <p>Customer testimonials have yet to be published. If you’ve used an EazyLink service and would like to share your experience, <a href="#ask-me">get in touch</a>.</p>
+      </div>
+    </section>
+
     <section class="wrap section-grid faq" id="faq" aria-labelledby="faq-title">
       <div>
-        <p class="eyebrow">05 / Common questions</p>
-        <h2 id="faq-title">Before you enquire.</h2>
+        <p class="eyebrow">05 / Help centre</p>
+        <h2 id="faq-title">How can we help?</h2>
       </div>
       <div class="service-list">
         <details><summary>Can you help me apply for university or college?</summary><p>The matriculant package includes course selection, university and college application support, and help with bursary applications.</p></details>
         <details><summary>Can I get help with my CV and interviews?</summary><p>The new graduate package includes CV writing, LinkedIn optimisation, and interview coaching.</p></details>
         <details><summary>Where can I browse vacancies?</summary><p>Visit the <a href="https://www.eazylinkjobs.co.za/">jobs portal</a> to browse listings. You can also explore the <a href="#opportunities">jobs and study resources</a> on this page.</p></details>
         <details><summary>What happens when I submit an enquiry?</summary><p>The form prepares your message and opens it in WhatsApp. Review the message there and tap Send when you’re ready.</p></details>
+      </div>
+    </section>
+
+    <section class="resource-band" id="ask-me" aria-labelledby="ask-title">
+      <div class="wrap section-grid">
+        <div><p class="eyebrow">Ask Me</p><h2 id="ask-title">Ask EazyLink a question.</h2></div>
+        <p>Ask about packages, career support, or how to use the site. Your question opens in WhatsApp for you to review and send.</p>
+        <form id="askForm" hidden>
+          <label for="askQuestion">Your question</label>
+          <textarea id="askQuestion" rows="3" maxlength="1000" required></textarea>
+          <button class="button" type="submit">Open in WhatsApp</button>
+        </form>
+        <a href="https://wa.me/27748475208">Open a WhatsApp chat directly ↗</a>
       </div>
     </section>
 
@@ -202,15 +256,32 @@
 
       </form>
     </section>
+    <section class="resource-band" id="legal" aria-labelledby="legal-title">
+      <div class="wrap section-grid">
+        <div><p class="eyebrow">Legal</p><h2 id="legal-title">Policies and agreements.</h2></div>
+        <div class="directory-grid">
+          <div><h3>Terms and conditions</h3><a href="./documents/easylink_subscription.pdf">Subscription agreement</a></div>
+          <div><h3>Privacy and data protection</h3><a href="./documents/easylink_policies.pdf">Company policies and privacy policy</a></div>
+          <div><h3>Consent</h3><a href="./documents/eazylink_consentform.pdf">Parental consent form</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section-grid" id="developers" aria-labelledby="developers-title">
+      <div><p class="eyebrow">Developers</p><h2 id="developers-title">API and integrations.</h2></div>
+      <p>EazyLink Careers has yet to publish public API documentation or an access process. <a href="#ask-me">Ask us about an integration</a> and tell us what you’d like to connect.</p>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="wrap footer-inner">
       <p>EazyLink Careers · Pretoria, South Africa</p>
-      <nav aria-label="Documents">
-        <a href="./documents/easylink_policies.pdf">Policies</a>
-        <a href="./documents/eazylink_consentform.pdf">Consent form</a>
-        <a href="./documents/easylink_subscription.pdf">Subscription</a>
+      <nav aria-label="Footer navigation">
+        <a href="#industries">Industries</a>
+        <a href="#customers">Our customers</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#legal">Legal</a>
+        <a href="#developers">Developers</a>
       </nav>
     </div>
   </footer>

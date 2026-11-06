@@ -121,3 +121,53 @@ document.querySelectorAll(".packages a[data-package]").forEach((link) => {
     if (option) packageSelect.value = option.value;
   });
 });
+
+const checklistItems = Array.from(document.querySelectorAll("#applicationChecklist input"));
+const checklistProgress = document.getElementById("checklistProgress");
+const checklistKey = "eazylink-application-checklist";
+const resetChecklist = document.getElementById("resetChecklist");
+
+try {
+  const saved = JSON.parse(localStorage.getItem(checklistKey) || "[]");
+  if (Array.isArray(saved)) {
+    checklistItems.forEach((item) => { item.checked = saved.includes(item.value); });
+  }
+} catch {
+  // The checklist remains usable when browser storage is unavailable.
+}
+
+function updateChecklist() {
+  const completed = checklistItems.filter((item) => item.checked).map((item) => item.value);
+  checklistProgress.textContent = `${completed.length} of ${checklistItems.length} steps complete`;
+  return completed;
+}
+
+function saveChecklist() {
+  const completed = updateChecklist();
+  try {
+    localStorage.setItem(checklistKey, JSON.stringify(completed));
+  } catch {
+    // Progress still works for the current page.
+  }
+}
+
+checklistItems.forEach((item) => item.addEventListener("change", saveChecklist));
+resetChecklist.addEventListener("click", () => {
+  checklistItems.forEach((item) => { item.checked = false; });
+  saveChecklist();
+});
+updateChecklist();
+document.getElementById("checklistActions").hidden = false;
+
+const resourceCategory = document.getElementById("resourceCategory");
+const resources = document.querySelectorAll("[data-resource]");
+
+function filterResources() {
+  resources.forEach((resource) => {
+    resource.hidden = resourceCategory.value !== "all" && resource.dataset.resource !== resourceCategory.value;
+  });
+}
+
+resourceCategory.addEventListener("change", filterResources);
+filterResources();
+document.getElementById("resourceFilter").hidden = false;

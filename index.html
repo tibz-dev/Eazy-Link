@@ -82,24 +82,51 @@
       </div>
     </section>
 
+    <section class="wrap section-grid checklist" id="checklist" aria-labelledby="checklist-title">
+      <div>
+        <p class="eyebrow">03 / Application toolkit</p>
+        <h2 id="checklist-title">Get application-ready.</h2>
+      </div>
+      <fieldset class="checklist-panel" id="applicationChecklist">
+        <legend>Job application checklist</legend>
+        <label><input type="checkbox" value="requirements"> Read the job requirements and check the closing date.</label>
+        <label><input type="checkbox" value="cv"> Tailor your CV to the role and check your contact details.</label>
+        <label><input type="checkbox" value="documents"> Gather the documents listed in the vacancy.</label>
+        <label><input type="checkbox" value="examples"> Prepare examples of your skills and achievements.</label>
+        <label><input type="checkbox" value="review"> Proofread the application before you submit it.</label>
+        <div class="checklist-actions" id="checklistActions" hidden>
+          <output id="checklistProgress" aria-live="polite"></output>
+          <button type="button" id="resetChecklist">Reset checklist</button>
+        </div>
+      </fieldset>
+    </section>
+
     <section class="resource-band" id="opportunities" aria-labelledby="resource-title">
       <div class="wrap section-grid">
-        <div><p class="eyebrow">03 / Opportunities</p><h2 id="resource-title">Jobs and study opportunities.</h2></div>
+        <div><p class="eyebrow">04 / Opportunities</p><h2 id="resource-title">Jobs and study opportunities.</h2></div>
+        <div class="resource-filter" id="resourceFilter" hidden>
+          <label for="resourceCategory">Show resources for</label>
+          <select id="resourceCategory">
+            <option value="all">Jobs and study</option>
+            <option value="jobs">Jobs</option>
+            <option value="study">Study and funding</option>
+          </select>
+        </div>
         <ul class="resource-list">
-          <li><a href="https://www.eazylinkjobs.co.za/">EazyLink jobs portal ↗</a></li>
-          <li><a href="https://www.linkedin.com/jobs/">LinkedIn Jobs ↗</a></li>
-          <li><a href="https://www.indeed.com/">Indeed ↗</a></li>
-          <li><a href="https://remoteok.com/">Remote OK ↗</a></li>
-          <li><a href="https://www.scholarships.com/">Scholarships.com ↗</a></li>
-          <li><a href="https://www.chevening.org/">Chevening ↗</a></li>
-          <li><a href="https://erasmus-plus.ec.europa.eu/">Erasmus+ ↗</a></li>
+          <li data-resource="jobs"><a href="https://www.eazylinkjobs.co.za/">EazyLink jobs portal ↗</a></li>
+          <li data-resource="jobs"><a href="https://www.linkedin.com/jobs/">LinkedIn Jobs ↗</a></li>
+          <li data-resource="jobs"><a href="https://www.indeed.com/">Indeed ↗</a></li>
+          <li data-resource="jobs"><a href="https://remoteok.com/">Remote OK ↗</a></li>
+          <li data-resource="study"><a href="https://www.scholarships.com/">Scholarships.com ↗</a></li>
+          <li data-resource="study"><a href="https://www.chevening.org/">Chevening ↗</a></li>
+          <li data-resource="study"><a href="https://erasmus-plus.ec.europa.eu/">Erasmus+ ↗</a></li>
         </ul>
       </div>
     </section>
 
     <section class="wrap section-grid faq" id="faq" aria-labelledby="faq-title">
       <div>
-        <p class="eyebrow">04 / Common questions</p>
+        <p class="eyebrow">05 / Common questions</p>
         <h2 id="faq-title">Before you enquire.</h2>
       </div>
       <div class="service-list">
@@ -112,7 +139,7 @@
 
     <section class="wrap section-grid" id="contact" aria-labelledby="contact-title">
       <div>
-        <p class="eyebrow">05 / Contact</p>
+        <p class="eyebrow">06 / Contact</p>
         <h2 id="contact-title">Tell us what you need.</h2>
         <p>Complete the form to prepare your enquiry and open it in WhatsApp.</p>
         <address> Pretoria, South Africa<br>

@@ -185,3 +185,28 @@ form textarea { resize: vertical; }
 }
 .package-finder a { color: var(--accent); font-weight: 700; }
 .faq { border-bottom: 1px solid var(--line); }
+
+.checklist { border-bottom: 1px solid var(--line); }
+.checklist-panel {
+  min-width: 0;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+  background: var(--panel);
+}
+.checklist-panel legend { padding-inline: .5rem; font-weight: 700; }
+.checklist-panel label { display: flex; align-items: baseline; gap: .75rem; padding-block: .55rem; }
+.checklist-panel input { accent-color: var(--accent); }
+.checklist-actions:not([hidden]) { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; margin-top: .75rem; }
+.checklist-actions button, .resource-filter select {
+  padding: .45rem .75rem;
+  border: 1px solid #677496;
+  border-radius: .3rem;
+  background: var(--canvas);
+  color: var(--ink);
+  color-scheme: dark;
+  font: inherit;
+}
+.checklist-actions button { cursor: pointer; }
+.resource-filter:not([hidden]) { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }

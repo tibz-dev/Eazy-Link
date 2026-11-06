@@ -1621,3 +1621,83 @@ body {
   
 
 }
+/* EazyLink Careers */
+:root {
+  --majorelle-blue: #304bd5;
+  --raisin-black-1: #152344;
+  --raisin-black-2: #101c37;
+  --slate-gray: #465674;
+  --ghost-white: #f3f6ff;
+  --mustard: #bce9de;
+}
+
+.header,
+.header.active {
+  background: var(--white);
+  padding-block: 10px;
+  border-bottom: 1px solid #e1e7f5;
+}
+
+.header .logo img { height: clamp(46px, 7vw, 64px); }
+
+.navbar .logo { font-size: 2.2rem; }
+
+main section[id] { scroll-margin-top: 85px; }
+
+.hero {
+  padding-block: clamp(125px, 16vw, 210px) clamp(55px, 8vw, 100px);
+  background: linear-gradient(125deg, #f4f7ff, #e9efff);
+}
+
+.hero .container { gap: clamp(32px, 5vw, 72px); }
+
+.hero-content { margin-block-start: 0; }
+
+.hero .wrapper { flex-wrap: wrap; }
+
+.hero-eyebrow {
+  margin-block-end: 14px;
+  color: var(--majorelle-blue);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 6vw, 7.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
+.hero-title span { color: var(--majorelle-blue); }
+
+.hero-text {
+  max-width: 48ch;
+  margin-block: 22px 28px;
+}
+
+.hero-banner {
+  min-width: 0;
+  margin-inline: 0;
+  align-self: center;
+}
+
+.hero-banner img { height: auto; }
+
+.btn { padding-inline: clamp(18px, 3vw, 36px); }
+
+.section-subtitle { color: var(--slate-gray); }
+
+@media (min-width: 992px) {
+  .navbar-portal { display: none; }
+  .navbar-link { color: var(--slate-gray); }
+  .header .btn { height: 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .header, .navbar, .overlay, .btn, .btn::before, .btn::after {
+    transition: none;
+  }
+}
